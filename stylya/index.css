@@ -767,12 +767,12 @@ header, .header-bottom {
     top: 0;
     right: 0;
     bottom: 0;
-    /* opacity: 0; */
-    opacity: 1;
+    opacity: 0;
+    /* opacity: 1; */
     width: 100%;
     height: 100vh;
-    /* pointer-events: none; */
-    pointer-events: initial;
+    pointer-events: none;
+    /* pointer-events: initial; */
     transition: all .25s;
     z-index: 200;
 }
