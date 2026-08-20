@@ -54,7 +54,7 @@
                         </a>
                         <a href="https://vk.ru/podcasts-75679763">
                             <svg>
-                                <use href="./svg/sprite.svg#icon-footer-other-2"></use>
+                                <use href="./svg/sprite.svg#icon-yandex-music"></use>
                             </svg>
                         </a>
                         <a href="https://podcasts.apple.com/ru/podcast/%D1%86%D0%B0%D1%80%D1%8C%D0%B3%D1%80%D0%B0%D0%B4/id1849695780">
@@ -106,7 +106,7 @@
         <div class="header-bottom">
             <div class="container">
                 <nav class="header-bottom-aside">
-                    <a href="" class="header-burger">
+                    <a href="" class="header-burger" id="header-burger" onclick="event.preventDefault()">
                         <div class="burger-menu"></div>
                         <span>Рубрики</span>
                     </a>
@@ -240,8 +240,11 @@
                         </li>
                         <li>
                             <details>
-                                <summary>Рубрики</summary>
-                                    <ul style="display: block;">
+                                <summary>
+                                    <p>Рубрики</p>
+                                    <div class="sum"></div>
+                                </summary>
+                                    <ul style="display: block;" class="content">
                                         <li>
                                             <a href="https://m.tsargrad.tv/materials/rubric/rassledovanija-cargrada">Расследования</a>
                                         </li>
@@ -270,7 +273,8 @@
                         <li>
                             <a href="https://m.tsargrad.tv/advertisers">Рекламодателям</a>
                         </li>
-                        <li class="mob-separ">
+                        <li class="mob-separ"></li>
+                        <li>
                             <div class="mob-menu-soci">
                                 <a href="">
                                     <svg>
@@ -279,7 +283,7 @@
                                 </a>
                                 <a href="">
                                     <svg>
-                                        <use href='./svg/sprite.svg#icon-footer-dzen'></use>
+                                        <use href='./svg/sprite.svg#icon-dzen-mob'></use>
                                     </svg>
                                 </a>
                                 <a href="">
@@ -301,12 +305,12 @@
                                 </a>
                                 <a href="">
                                     <svg>
-                                        <use href='./svg/sprite.svg#icon-footer-other-1'></use>
+                                        <use href='./svg/sprite.svg#icon-yandex-music'></use>
                                     </svg>
                                 </a>
                                 <a href="">
                                     <svg>
-                                        <use href='./svg/sprite.svg#icon-footer-other-2'></use>
+                                        <use href='./svg/sprite.svg#icon-footer-other-1'></use>
                                     </svg>
                                 </a>
                                 <a href="">
@@ -316,8 +320,76 @@
                                 </a>
                             </div>
                         </li>
-                        <li></li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-modal">
+        <div class="header-modal-content">
+            <div class="top-menu">
+                <ul class="top-menu-list">
+                    <li>
+                        <a href="https://tsargrad.tv/news" class="top-menu-item">Новости</a>
+                    </li>
+                    <li>
+                        <a href="https://tsargrad.tv/articles/rubric/analitika" class="top-menu-item">Аналитика</a>
+                    </li>
+                    <li>
+                        <a href="https://tsargrad.tv/special_projects" class="top-menu-item">Спецпроекты</a>
+                    </li>
+                    <li>
+                        <a href="https://tsargrad.tv/materials/rubric/kultura-4" class="top-menu-item">Культура</a>
+                    </li>
+                    <li>
+                        <a href="https://tsargrad.tv/polls" class="top-menu-item">Опросы</a>
+                    </li>
+                </ul>
+                <div class="top-menu-close"></div>
+            </div>
+            <div class="top-menu-tabs">
+                <ul class="top-menu-tabs-list">
+                    <li class="tab-btn active" data-tab="panel-1" id="tab-1">
+                        <a href="https://tsargrad.tv/materials/rubric/rassledovanija-cargrada" class="tab-list-item">Расследования</a>
+                    </li>
+                    <li class="tab-btn" data-tab="panel-2" id="tab-2">
+                        <a href="https://tsargrad.tv/onlytext/rubric/obshhestvo" class="tab-list-item">Общество</a>
+                    </li>
+                    <li class="tab-btn" data-tab="panel-3" id="tab-3">
+                        <a href="https://tsargrad.tv/onlytext/rubric/politika-2" class="tab-list-item">Политика</a>
+                    </li>
+                    <li class="tab-btn" data-tab="panel-4" id="tab-4">
+                        <a href="https://tsargrad.tv/onlytext/rubric/ideologiya" class="tab-list-item">Идеология</a>
+                    </li>
+                    <li class="tab-btn" data-tab="panel-5" id="tab-5">
+                        <a href="https://tsargrad.tv/onlytext/rubric/jekonomika" class="tab-list-item">Экономика</a>
+                    </li>
+                </ul>
+                <div class="top-tabs-content">
+                    <div class="tab-panel active" style="background-image: url(https://img.tsargrad.tv/cache/b/b/3_rassledovanie.jpg/w627h353fill.jpg)" data-tab-index="0" id="panel-1">
+                        <div class="tab-content">Расследования Царьграда – плод совместной работы группы аналитиков и экспертов. Мы вскрываем механизм работы олигархических корпораций, анатомию подготовки цветных революций, структуру преступных этнических группировок. Мы обнажаем неприглядные факты и показываем опасные тенденции, не даём покоя прокуратуре и следственным органам, губернаторам и "авторитетам". Мы защищаем Россию не просто словом, а свидетельствами и документами.
+                        </div>
+                    </div>
+                    <div class="tab-panel" style="background-image: url(https://img.tsargrad.tv/cache/b/a/obshestvo.jpg/w627h353fill.jpg)" data-tab-index="1" id="panel-2">
+                        <div class="tab-content">
+                            Люди, события, факты» - вы делаете те новости, которые происходят вокруг нас. А мы о них говорим. Это рубрика о самых актуальных событиях. Интересные сюжеты и горячие репортажи, нескучные интервью и яркие мнения.
+                        </div>
+                    </div>
+                    <div class="tab-panel" style="background-image: url(https://img.tsargrad.tv/cache/1/5/politika.jpg/w627h353fill.jpg)" data-tab-index="2" id="panel-3">
+                        <div class="tab-content">
+                            События внутренней, внешней и международной политики, политические интриги и тайны, невидимые рычаги принятия публичных решений, закулисье переговоров, аналитика по произошедшим событиям и прогнозы на ближайшее будущее и перспективные тенденции, публичные лица мировой политики и их "серые кардиналы", заговоры против России и разоблачения отечественной "пятой колонны" – всё это и многое вы найдёте в материалах отдела политики Царьграда.
+                        </div>
+                    </div>
+                    <div class="tab-panel" style="background-image: url(https://img.tsargrad.tv/cache/b/f/ideologiya.jpg/w627h353fill.jpg)" data-tab-index="3" id="panel-4">
+                        <div class="tab-content">
+                            Идеологический отдел Царьграда – это фабрика русских смыслов. Мы не раскрываем подковёрные интриги, не "изобретаем велосипеды" и не "открываем Америку". Мы возвращаем утраченные смыслы очевидным вещам. Россия – великая православная держава с тысячелетней историей. Русская Церковь – основа нашей государственности и культуры. Москва – Третий Рим. Русский – тот, кто искренне любит Россию, её историю и культуру. Семья – союз мужчины и женщины. И их дети. Желательно, много детей. Народосбережение – ключевая задача государства. Задача, которую невозможно решить без внятной идеологии.
+                        </div>
+                    </div>
+                    <div class="tab-panel" style="background-image: url(https://img.tsargrad.tv/cache/0/3/economika.jpg/w627h353fill.jpg)" data-tab-index="4" id="panel-5">
+                        <div class="tab-content">
+                            Экономический отдел телеканала «Царьград» является единственным среди всех крупных СМИ, который отвергает либерально-монетаристские принципы. Мы являемся противниками встраивания России в глобалисткую систему мироустройства, выступаем за экономический суверенитет и независимость нашего государства.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
