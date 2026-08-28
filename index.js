@@ -9,6 +9,11 @@ const panels = document.querySelectorAll('.tab-panel');
 const headModal = document.querySelector('.header-modal');
 const topMenuClose = document.querySelector('.top-menu-close');
 const headerBurger = document.getElementById('header-burger')
+const sentinel = document.querySelector('.sticky-sentinel');
+const menu = document.querySelector('.header-bottom');
+
+
+
 
 function openModal(e) {
   e.preventDefault();
@@ -74,3 +79,21 @@ buttons.forEach(button => {
   button.addEventListener('mouseenter', switchTab);
   button.addEventListener('focus', switchTab);
 });
+
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    // Если маркер полностью ушел выше экрана (boundingClientRect.top < 0)
+    // и он больше не пересекает область видимости (!entry.isIntersecting)
+    if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+      menu.classList.add('is-sticky');
+    } else {
+      menu.classList.remove('is-sticky');
+    }
+  });
+}, {
+  threshold: [0] // Срабатывает ровно в момент пересечения границы
+});
+
+observer.observe(sentinel);
